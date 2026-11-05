@@ -245,6 +245,18 @@ h1,h2,h3,h4,p{margin-top:0}.section-header{display:grid;grid-template-columns:1.
   .desktop-nav .nav-research-group{gap:4px}
   .desktop-nav .nav-submenu-toggle{width:24px;height:36px}
 }
+
+/* Reduce homepage section-to-section vertical whitespace only. */
+@media (min-width: 761px) {
+  body[data-page="index"] .section { padding-block: 76px; }
+  body[data-page="index"] .career-teaser { padding-block: 76px; }
+  body[data-page="index"] .cta-section { padding-block: 75px 78px; }
+}
+@media (max-width: 760px) {
+  body[data-page="index"] .section { padding-block: 54px; }
+  body[data-page="index"] .career-teaser { padding-block: 54px; }
+  body[data-page="index"] .cta-section { padding-block: 54px 58px; }
+}
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ahmed Mansour","honorificSuffix":"Ph.D.","url":"https://ahmedmansoour.github.io/","email":"mailto:mnsoour.a@gmail.com","jobTitle":"Postdoctoral Researcher","worksFor":{"@type":"CollegeOrUniversity","name":"The Hong Kong Polytechnic University"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Hong Kong Polytechnic University"},{"@type":"CollegeOrUniversity","name":"Cairo University"}],"sameAs":["https://orcid.org/0000-0002-9840-7030","https://scholar.google.com/citations?user=lFhcyh4AAAAJ&hl=en","https://www.linkedin.com/in/ahmd-mansour/","https://github.com/AhmedMansoour"],"knowsAbout":["Indoor positioning","Wi-Fi fingerprinting","Wireless localization","Pedestrian inertial navigation","Smartphone positioning","GNSS/PDR fusion","Seamless indoor-outdoor positioning","Location-based services","Multi-sensor fusion","Mobile crowdsensing","Autonomous radio mapping","GeoAI","Geographic information systems","Civil 3D","AI agents","Android development"]}</script></head><body data-page="index"><a class="skip" href="#main">Skip to content</a><div aria-hidden="true" class="reading-progress"><span id="progress"></span></div><header class="site-header" id="top"><div class="header-inner wrap"><a aria-label="Ahmed Mansour — home" class="brand" href="index.html"><strong>Ahmed Mansour</strong><span>Ph.D.  ·  Research &amp; Engineering</span></a><nav aria-label="Primary navigation" class="desktop-nav"><a aria-current="page" class="nav-link active" href="index.html">Home</a><div class="nav-research-group">
 <a class="nav-link" href="research.html">Research</a>
 <button aria-controls="research-submenu" aria-expanded="false" aria-label="Show research topics" class="nav-submenu-toggle" data-research-menu-toggle="" type="button"><svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="m6 9 6 6 6-6"></path></svg></button>
