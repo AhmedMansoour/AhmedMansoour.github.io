@@ -492,6 +492,84 @@ h1,h2,h3,h4,p{margin-top:0}.section-header{display:grid;grid-template-columns:1.
 .solutions-inquiry-actions small{font-size:10.5px;line-height:1.7;color:var(--muted);text-align:center}
 @media(max-width:1040px){.solutions-footer{grid-template-columns:1fr;gap:22px}.solutions-inquiry-actions{max-width:450px}}
 @media(max-width:650px){.solutions-hero{padding-block:43px 42px}.solutions-service-grid .solutions-service{min-height:0}.solutions-service-nudge,.scenario-project-cta{flex-direction:column;align-items:flex-start}.solutions-service-nudge a{white-space:normal}.scenario-project-cta .btn{width:100%;justify-content:center}.solutions-footer{padding-block:43px 58px}.solutions-inquiry-actions{max-width:none;width:100%}}
+
+/* Compact cinematic venue showroom */
+.venue-cinema{background:#10282c;color:#f4f7f4;padding:clamp(52px,6vw,86px) 0 61px;overflow:hidden}
+.cinema-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+.cinema-heading>div:first-child{max-width:810px}
+.cinema-eyebrow{font-size:10px;font-weight:850;letter-spacing:.17em;color:#b1d7c6;margin:0 0 14px}
+.cinema-eyebrow span{padding:0 8px}
+.cinema-heading h2{font:600 clamp(30px,4vw,55px)/1.09 var(--display);letter-spacing:-.052em;color:#fff;margin:0 0 12px}
+.cinema-heading p:not(.cinema-eyebrow){font-size:13px;line-height:1.75;color:#b9cdc8;margin:0}
+.cinema-controls{display:flex;gap:9px;flex-shrink:0}
+.cinema-controls button{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid #64817a;background:#1a3e40;color:#e6f4ea;font-size:21px;cursor:pointer}
+.cinema-controls button:hover{background:#28635a}
+.cinema-controls button:focus-visible,.cinema-rail .scene-btn:focus-visible,.cinema-inquiry:focus-visible{outline:3px solid #d7b777;outline-offset:3px}
+.cinema-rail{position:relative;display:flex;gap:11px;overflow-x:auto;scroll-snap-type:x proximity;padding:0 0 13px;margin-bottom:13px;scrollbar-color:#527d78 transparent;scrollbar-width:thin}
+.cinema-rail .scene-btn{position:relative;display:block;flex:0 0 clamp(154px,17vw,206px);height:98px;min-height:0;margin:0;padding:0;border-radius:9px;overflow:hidden;border:1px solid #65817a;background:#254247;color:#fff;cursor:pointer;text-align:left;scroll-snap-align:center}
+.cinema-rail .scene-btn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.79}
+.cinema-rail .scene-btn:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#091c23ec,transparent 90%);pointer-events:none}
+.cinema-rail .scene-btn:hover img,.cinema-rail .scene-btn.is-active img{opacity:1}
+.cinema-rail .scene-btn.is-active{border-color:#c2edd4;box-shadow:inset 0 0 0 1px #c2edd4}
+.cinema-thumb-caption{position:absolute;z-index:1;left:11px;bottom:9px;right:7px;display:flex;flex-direction:column;gap:3px}
+.cinema-thumb-caption strong{font-size:12px;line-height:1.2;font-weight:800}
+.cinema-thumb-caption small{font-size:10px;line-height:1.2;color:#cae0d4}
+.cinema-slide{display:grid;grid-template-columns:minmax(0,1.23fr) minmax(340px,.77fr);border-radius:10px;overflow:hidden;background:#f8f9f4;min-height:440px;box-shadow:0 25px 75px #0003}
+.cinema-slide.cinema-reveal{animation:cinema-enter .32s ease-out}
+@keyframes cinema-enter{from{opacity:.72}to{opacity:1}}
+.cinema-art{position:relative;min-height:440px;background:#244045;overflow:hidden}
+.cinema-art>a{position:absolute;inset:0;display:block}
+.cinema-art img.stage-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.cinema-art:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#071d25a8,transparent 35%,transparent 68%,#071d2588)}
+.cinema-art-top{position:absolute;inset:18px 18px auto 22px;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.cinema-art-top>span{color:#f5fff8;font-size:10px;font-weight:850;letter-spacing:.1em;line-height:1.5;text-shadow:0 1px 5px #0008}
+.cinema-art .view-toggle{display:flex;gap:3px;padding:4px;background:#102f32db;border:1px solid #8daaa4;border-radius:30px;flex-shrink:0;backdrop-filter:blur(7px)}
+.cinema-art .view-toggle button{border:0;background:none;color:#def2e4;border-radius:24px;padding:8px 12px;font-size:10px;font-weight:750;cursor:pointer}
+.cinema-art .view-toggle button.is-active{background:#e4f2e5;color:#1a4841}
+.cinema-art-bottom{position:absolute;z-index:1;left:21px;right:21px;bottom:20px;display:flex;flex-direction:column;gap:5px;color:#fff;text-shadow:0 1px 9px #0009}
+.cinema-art-bottom>span{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#c3e6d3}
+.cinema-art-bottom strong{font-size:15px;line-height:1.5;font-weight:750;max-width:460px}
+.cinema-art-bottom small{font-size:10px;color:#d5e9dd}
+.cinema-copy{display:flex;flex-direction:column;min-width:0;padding:clamp(23px,2.65vw,37px);color:#16322f}
+.cinema-kicker{font-size:10px;font-weight:850;letter-spacing:.15em;color:#267063;margin-bottom:11px}
+.cinema-copy h3{font:600 clamp(28px,2.8vw,40px)/1.09 var(--display);letter-spacing:-.047em;margin:0 0 12px;color:#172d31}
+.cinema-copy>p{font-size:13px;color:#60716d;line-height:1.65;margin:0 0 14px}
+.cinema-benefits{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.cinema-benefits .quick-pill{font-size:10px;font-weight:750;color:#20574e;background:#e1efe4;padding:7px 9px;border-radius:4px}
+.cinema-quick-deliver,.cinema-techline{border-top:1px solid #d9e5dc;padding:12px 0}
+.cinema-small-label{font-size:9.5px;letter-spacing:.12em;color:#54766b;font-weight:850}
+.cinema-quick-deliver ul{padding:0;margin:9px 0 0;list-style:none;display:grid;gap:7px}
+.cinema-quick-deliver li{display:flex;gap:9px;font-size:11.5px;line-height:1.4;color:#3f514e}
+.cinema-quick-deliver li:before{content:"✓";color:#18765a;font-weight:900}
+.cinema-techline>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.cinema-techline>div span{padding:6px 8px;border-radius:4px;background:#ebf1ed;font-size:10px;color:#48665f}
+.cinema-inquiry{display:flex;justify-content:space-between;align-items:center;background:#1c655b;color:#fff;border-radius:5px;padding:13px 15px;min-height:43px;font-size:12px;font-weight:850;margin-top:auto}
+.cinema-inquiry:hover{background:#227d6e;color:#fff}
+.cinema-inquiry span{font-size:20px}
+.cinema-bottom-line{display:flex;align-items:center;gap:15px;padding:16px 0 10px;color:#b3ccc1;font-size:10px}
+.cinema-bottom-line small{margin-left:auto;text-align:right;font-size:10px;color:#9ab9ad}
+.cinema-bottom-line strong{white-space:nowrap;font-size:10px;color:#e4f3e8}
+.cinema-progress{height:3px;flex:0 0 100px;background:#3b5b59;border-radius:3px;overflow:hidden}
+.cinema-progress>span{display:block;width:0;height:100%;background:#bce9cb}
+@keyframes cinema-progress-fill{from{width:0}to{width:100%}}
+.cinema-details{background:#17383d;border:1px solid #426462;color:#d5e9de;border-radius:5px;margin-top:10px}
+.cinema-details summary{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 17px;font-size:11px;font-weight:750;cursor:pointer;list-style:none}
+.cinema-details summary::-webkit-details-marker{display:none}
+.cinema-details summary span{font-size:19px;color:#d5e9de}
+.cinema-details[open] summary{border-bottom:1px solid #426462}
+.cinema-details[open] summary span{transform:rotate(45deg)}
+.cinema-details-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:22px}
+.cinema-details-grid h4{font:600 20px/1.2 var(--display);color:#f1f9f3;margin:0 0 10px}
+.cinema-details-grid p,.cinema-details-grid li{color:#c4d7cf;font-size:11.5px;line-height:1.7}
+.cinema-details-grid ul{margin:8px 0 20px;padding-left:18px}
+.cinema-details .use-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cinema-details .use-chip{padding:9px;background:#214448;border:1px solid #45605a}
+.cinema-details .use-chip small,.cinema-details .use-chip strong{color:#d6ebe2}
+.cinema-details .cinema-detail-caption{font-style:italic;color:#9ebdb0}
+@media(max-width:990px){.cinema-slide{grid-template-columns:minmax(0,1fr) minmax(305px,.94fr)}.cinema-copy{padding:23px}.cinema-copy h3{font-size:31px}.cinema-art{min-height:425px}}
+@media(max-width:760px){.cinema-slide{grid-template-columns:1fr}.cinema-art{min-height:0;aspect-ratio:16/10}.cinema-heading h2{font-size:clamp(30px,6vw,44px)}.cinema-details-grid{grid-template-columns:1fr}.cinema-art-bottom strong{font-size:13px}}
+@media(max-width:540px){.venue-cinema{padding-block:47px 54px}.cinema-heading{flex-direction:column;align-items:flex-start;gap:17px}.cinema-rail .scene-btn{flex-basis:155px;height:91px}.cinema-art-top{left:13px;top:12px;right:10px}.cinema-art-top>span{max-width:110px}.cinema-art .view-toggle button{padding:7px 9px}.cinema-copy{padding:22px 19px}.cinema-bottom-line{flex-wrap:wrap;gap:9px}.cinema-bottom-line small{width:100%;margin:0;text-align:left}.cinema-progress{flex-basis:65px}.cinema-details .use-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.cinema-slide.cinema-reveal{animation:none!important}}
 </style></head><body data-page="solutions"><a class="skip" href="#main">Skip to content</a><div aria-hidden="true" class="reading-progress"><span id="progress"></span></div><header class="site-header" id="top"><div class="header-inner wrap"><a aria-label="Ahmed Mansour — home" class="brand" href="index.html"><strong>Ahmed Mansour</strong><span>Ph.D.  ·  Research &amp; Engineering</span></a><nav aria-label="Primary navigation" class="desktop-nav"><a class="nav-link" href="index.html">Home</a><div class="nav-research-group">
 <a class="nav-link" href="index.html#research.html">Research</a>
 <button class="nav-submenu-toggle" type="button" aria-expanded="false" aria-controls="research-submenu" aria-label="Show research topics" data-research-menu-toggle><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -524,74 +602,56 @@ h1,h2,h3,h4,p{margin-top:0}.section-header{display:grid;grid-template-columns:1.
  </div>
  <div class="solutions-service-nudge"><span>Looking for safety workflows, location-based services, or operational analytics instead?</span><a href="#inquiry">Describe your application ↗</a></div>
 </section>
-<section class="wrap solutions-section solutions-studio" id="venues" aria-labelledby="venue-explorer-title">
-  <div class="scenario-shell">
-    <aside class="scenario-sidebar" aria-label="Choose venue type">
-      <p class="section-index">VENUE SCENARIOS</p>
-      <p class="scenario-intro">Choose a venue to explore the possible user experience, deliverables, and candidate technologies. These are concepts, not customer deployments.</p>
-      <div class="scenario-list" role="tablist" aria-label="Venue scenarios">
-        <button class="scene-btn is-active" role="tab" aria-selected="true" data-scene="malls"><strong>Shopping malls</strong><span>Multi-floor shopper navigation</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="hospitals"><strong>Hospitals</strong><span>Clinical wayfinding &amp; equipment support</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="airports"><strong>Airports</strong><span>Gate transfer and terminal navigation</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="campuses"><strong>Campuses</strong><span>Indoor–outdoor academic navigation</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="museums"><strong>Museums</strong><span>Visitor guidance and exhibit discovery</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="warehouses"><strong>Warehouses</strong><span>Asset search and workflow movement</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="construction"><strong>Construction sites</strong><span>Worker safety zones and floor awareness</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="industry"><strong>Industrial facilities</strong><span>Maintenance navigation and restricted areas</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="offices"><strong>Offices</strong><span>Destination finding and facility response</span></button>
-        <button class="scene-btn" role="tab" aria-selected="false" data-scene="hospitality"><strong>Hotels &amp; event venues</strong><span>Guest wayfinding and service flow</span></button>
-      </div>
-    </aside>
-    <div class="scenario-stage">
-      <div class="scenario-topbar">
-        <div>
-          <p class="section-index">INTERACTIVE SOLUTION EXPLORER</p>
-          <h2 id="venue-explorer-title">Shopping mall positioning and visitor navigation</h2>
-          <p id="scene-summary">A floor-aware mobile guidance system for large retail venues, helping visitors reach destinations across multiple levels while supporting discovery and accessibility.</p>
-        </div>
-        <div class="view-toggle" role="tablist" aria-label="Choose visual mode">
-          <button type="button" class="is-active" data-view="application" aria-selected="true">Application view</button>
-          <button type="button" data-view="venue" aria-selected="false">Venue view</button>
-        </div>
-      </div>
-      <div class="stage-card">
-        <div class="stage-meta">
-          <div>
-            <div class="eyebrow" id="stage-eyebrow">Application example</div>
-            <div class="note" id="stage-note">Route to an upper-floor shop through a multilevel mall</div>
-          </div>
-          <div class="note" id="scene-persona">Primary user: visitors and shoppers</div>
-        </div>
-        <div class="stage-image-wrap">
-          <a id="stage-image-link" href="assets/solutions-v22-visual-04.webp" target="_blank" rel="noopener" aria-label="Open full-size scenario image">
-            <img id="stage-image" class="stage-image" src="assets/solutions-v22-visual-04.webp" alt="Illustrative route to an upper-floor shop inside a shopping mall" width="1672" height="941" loading="eager" decoding="async" />
-          </a>
-        </div>
-        <div class="stage-foot">
-          <div class="info-card">
-            <h3 id="scene-outcome-title">Illustrative solution outcome</h3>
-            <p id="scene-outcome-copy">Visitors search for a shop, receive a route across floors, and follow guidance through lifts or escalators without needing to understand the building layout in advance.</p>
-            <div class="quick-brief" id="scene-brief"></div>
-          </div>
-          <div class="info-card">
-            <h3>Delivery focus</h3>
-            <ul class="deliver-list" id="scene-deliverables"></ul>
-          </div>
-        </div>
-        <div class="stage-foot" style="padding-top:0">
-          <div class="info-card">
-            <h3>Potential applications</h3>
-            <div class="use-grid" id="scene-uses"></div>
-          </div>
-          <div class="info-card">
-            <h3>Candidate technology stack</h3>
-            <ul class="stack-list" id="scene-stack"></ul>
-          </div>
-        </div>
-        <p class="stage-caption" id="stage-caption">Conceptual visual for a deployment scenario. It illustrates how a positioning-enabled user experience may look in this venue type.</p><div class="scenario-project-cta"><p>Have a similar venue or application?</p><a class="btn btn-primary" id="scene-inquiry" href="mailto:mnsoour.a@gmail.com?subject=Indoor%20positioning%20%26%20navigation%20%7C%20Project%20inquiry&amp;body=Venue%20%2F%20building%20type%3A%0ALocation%20(city%2C%20country)%3A%0ANumber%20of%20floors%20%2F%20area%3A%0AProject%20objective%20%2F%20users%3A%0ACurrent%20Wi-Fi%20%2F%20BLE%20%2F%20UWB%20infrastructure%3A%0AMobile%20devices%20%2F%20platforms%3A%0ATimeline%20and%20further%20details%3A%0A">Request a solution for this venue ↗</a></div>
-      </div>
-    </div>
+<section class="venue-cinema" id="venues" aria-labelledby="venue-cinema-title" aria-roledescription="carousel">
+ <div class="wrap venue-cinema-wrap">
+  <div class="cinema-heading"><div>
+   <p class="cinema-eyebrow">VENUE SOLUTIONS <span aria-hidden="true">/</span> 10 ENVIRONMENTS</p>
+   <h2 id="venue-cinema-title">Different spaces. Tailored experiences.</h2>
+   <p>Explore how tailored positioning could make navigation and location services easier in your venue.</p>
+  </div><div class="cinema-controls" role="group" aria-label="Showcase controls">
+   <button id="cinema-play" type="button" aria-label="Pause automatic slides" title="Pause automatic slides">Ⅱ</button>
+   <button id="cinema-prev" type="button" aria-label="Previous venue" title="Previous venue">←</button>
+   <button id="cinema-next" type="button" aria-label="Next venue" title="Next venue">→</button>
+  </div></div>
+  <div class="cinema-rail" id="cinema-rail" role="tablist" aria-label="Choose a venue">
+   <button type="button" class="scene-btn is-active" data-scene="malls" role="tab" aria-selected="true" aria-label="Shopping malls scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-05.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Shopping malls</strong><small>Retail wayfinding</small></span></button>
+<button type="button" class="scene-btn" data-scene="hospitals" role="tab" aria-selected="false" aria-label="Hospitals scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-06.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Hospitals</strong><small>Visitor guidance</small></span></button>
+<button type="button" class="scene-btn" data-scene="airports" role="tab" aria-selected="false" aria-label="Airports scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-08.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Airports</strong><small>Terminal navigation</small></span></button>
+<button type="button" class="scene-btn" data-scene="campuses" role="tab" aria-selected="false" aria-label="Campuses scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-10.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Campuses</strong><small>Connected spaces</small></span></button>
+<button type="button" class="scene-btn" data-scene="museums" role="tab" aria-selected="false" aria-label="Museums scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-12.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Museums</strong><small>Exhibit discovery</small></span></button>
+<button type="button" class="scene-btn" data-scene="warehouses" role="tab" aria-selected="false" aria-label="Warehouses scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-14.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Warehouses</strong><small>Asset location</small></span></button>
+<button type="button" class="scene-btn" data-scene="construction" role="tab" aria-selected="false" aria-label="Construction scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-16.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Construction</strong><small>Site awareness</small></span></button>
+<button type="button" class="scene-btn" data-scene="industry" role="tab" aria-selected="false" aria-label="Industrial sites scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-18.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Industrial sites</strong><small>Maintenance & safety</small></span></button>
+<button type="button" class="scene-btn" data-scene="offices" role="tab" aria-selected="false" aria-label="Offices scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-20.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Offices</strong><small>Workplace services</small></span></button>
+<button type="button" class="scene-btn" data-scene="hospitality" role="tab" aria-selected="false" aria-label="Hotels & events scenario" aria-controls="cinema-slide"><img src="assets/solutions-v22-visual-22.webp" loading="lazy" decoding="async" alt=""/><span class="cinema-thumb-caption"><strong>Hotels & events</strong><small>Guest guidance</small></span></button>
   </div>
+  <div class="cinema-slide" id="cinema-slide" role="tabpanel" aria-label="Shopping mall solution example">
+   <div class="cinema-art">
+    <a id="stage-image-link" href="assets/solutions-v22-visual-04.webp" target="_blank" rel="noopener" aria-label="Open full-size positioning illustration"><img id="stage-image" class="stage-image" src="assets/solutions-v22-visual-04.webp" width="1672" height="941" alt="Example multilevel shopping mall navigation route" decoding="async" loading="eager"/></a>
+    <div class="cinema-art-top"><span id="cinema-image-counter">01 / 10 <span aria-hidden="true">—</span> APPLICATION PREVIEW</span>
+     <div class="view-toggle" role="tablist" aria-label="Choose visual mode"><button type="button" class="is-active" data-view="application" role="tab" aria-selected="true">Solution</button><button type="button" data-view="venue" role="tab" aria-selected="false">Venue</button></div>
+    </div>
+    <div class="cinema-art-bottom"><span id="stage-eyebrow">Application example</span><strong id="stage-note">Route to an upper-floor shop</strong><small id="scene-persona">Primary user: visitors and shoppers</small></div>
+   </div>
+   <div class="cinema-copy">
+    <span class="cinema-kicker" id="cinema-kicker">RETAIL & SHOPPING</span>
+    <h3 id="venue-explorer-title">Make every floor easy to explore.</h3>
+    <p id="scene-summary">Help shoppers find shops, services and lifts through easy-to-follow routes.</p>
+    <div class="cinema-benefits" id="scene-brief"><span class="quick-pill">Store finder</span><span class="quick-pill">Multi-floor guidance</span><span class="quick-pill">Accessible paths</span></div>
+    <div class="cinema-quick-deliver"><span class="cinema-small-label">WHAT WE CAN DELIVER</span><ul id="cinema-short-deliver"><li>Mobile wayfinding experience</li><li>Floor maps and destination routing</li><li>Site pilot and validation</li></ul></div>
+    <div class="cinema-techline"><span class="cinema-small-label">TECHNOLOGY FIT</span><div id="cinema-tech-short"><span>BLE / Wi-Fi</span><span>Smartphone PDR</span><span>Floor awareness</span></div></div>
+    <a id="scene-inquiry" class="cinema-inquiry" href="mailto:mnsoour.a@gmail.com?subject=Shopping%20mall%20positioning%20project">Discuss this venue <span aria-hidden="true">↗</span></a>
+   </div>
+  </div>
+  <div class="cinema-bottom-line"><div class="cinema-progress" aria-hidden="true"><span id="cinema-progress-bar"></span></div><strong id="cinema-number" aria-live="off">01 / 10 · Shopping malls</strong><small>Illustrative concepts; not installed customer systems.</small></div>
+  <details class="cinema-details" id="cinema-details">
+   <summary>See the full solution approach <span aria-hidden="true">+</span></summary>
+   <div class="cinema-details-grid">
+    <div><h4 id="scene-outcome-title">What the solution could provide</h4><p id="scene-outcome-copy">Visitors find destinations across multiple floors.</p><div id="scene-uses" class="use-grid"></div></div>
+    <div><h4>Potential project deliverables</h4><ul id="scene-deliverables" class="deliver-list"></ul><h4>Technology options</h4><ul id="scene-stack" class="stack-list"></ul><p id="stage-caption" class="cinema-detail-caption"></p></div>
+   </div>
+  </details>
+ </div>
 </section>
 <script>
 (()=>{
@@ -619,6 +679,72 @@ h1,h2,h3,h4,p{margin-top:0}.section-header{display:grid;grid-template-columns:1.
  sceneBtns.forEach((btn,i)=>{btn.addEventListener('click',()=>{currentScene=btn.dataset.scene; render();}); btn.addEventListener('keydown',e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return; e.preventDefault(); let n=i; if(e.key==='ArrowDown')n=(i+1)%sceneBtns.length; else if(e.key==='ArrowUp')n=(i+sceneBtns.length-1)%sceneBtns.length; else if(e.key==='Home')n=0; else if(e.key==='End')n=sceneBtns.length-1; sceneBtns[n].focus(); currentScene=sceneBtns[n].dataset.scene; render();});});
  viewBtns.forEach(btn=>btn.addEventListener('click',()=>{currentView=btn.dataset.view; render();}));
  render();
+})();
+</script><script>
+(()=>{
+'use strict';
+const root=document.querySelector('.venue-cinema');if(!root)return;
+const rail=root.querySelector('#cinema-rail'),tabs=[...rail.querySelectorAll('.scene-btn')];
+const play=root.querySelector('#cinema-play'),prog=root.querySelector('#cinema-progress-bar'),details=root.querySelector('#cinema-details');
+const title=root.querySelector('#venue-explorer-title'),summary=root.querySelector('#scene-summary');
+const kicker=root.querySelector('#cinema-kicker'),shortDeliver=root.querySelector('#cinema-short-deliver'),tech=root.querySelector('#cinema-tech-short');
+const number=root.querySelector('#cinema-number'),counter=root.querySelector('#cinema-image-counter'),panel=root.querySelector('#cinema-slide');
+const marketing={"malls":["RETAIL & SHOPPING","Make every floor easy to explore.","Help shoppers find shops, services, and lifts with intuitive multi-floor routes.",["Mobile wayfinding experience","Floor maps and destination routing","Site pilot and validation"],["BLE / Wi-Fi","Smartphone PDR","Floor awareness"]],"hospitals":["HEALTHCARE","Help visitors find the right care, faster.","Offer easier routes to departments and support authorized equipment location.",["Hospital visitor guidance","Floor-aware destination maps","Navigation and tracking pilot"],["BLE / Wi-Fi","Inertial sensing","Multi-floor maps"]],"airports":["AIRPORTS & TERMINALS","Make complex terminal journeys simpler.","Guide passengers between check-in, gates, connections, and terminal services.",["Terminal navigation interface","Transfer and floor routing","On-site evaluation"],["BLE / Wi-Fi","PDR","Indoor–outdoor fusion"]],"campuses":["UNIVERSITIES & CAMPUSES","Connect buildings, paths, and people.","Guide students and visitors between outdoor paths, entrances, and rooms.",["Campus wayfinding app","Connected venue maps","Building-transition pilot"],["GNSS + PDR","BLE / Wi-Fi","Map matching"]],"museums":["MUSEUMS & CULTURE","Help every visitor discover more.","Connect exhibit discovery with easy-to-follow tours and accessible pathways.",["Museum guidance experience","Exhibit and route maps","Location-aware content"],["BLE proximity","Wi-Fi","Indoor maps"]],"warehouses":["WAREHOUSING","Locate assets without the search.","Support equipment finding and authorized workflows across indoor facilities.",["Asset-location pilot","Warehouse zone mapping","Operational dashboard"],["BLE tags","UWB where needed","Geofencing"]],"construction":["CONSTRUCTION SITES","Support safer site awareness, floor by floor.","Explore worker-location and navigation workflows for changing construction environments.",["Site positioning prototype","Zone and floor model","Field assessment"],["BLE / UWB","IMU fusion","Site maps"]],"industry":["INDUSTRIAL FACILITIES","Bring location into daily operations.","Help maintenance teams navigate to assets, work areas, and controlled zones.",["Industrial positioning pilot","Maintenance route maps","Operational validation"],["UWB / BLE","PDR","Geofencing"]],"offices":["OFFICES & WORKPLACES","Make workplaces simpler to navigate.","Help occupants find meeting rooms and services across connected offices.",["Workplace navigation app","Floor and room directory","Service integration pilot"],["Wi-Fi / BLE","Indoor routing","Mobile sensors"]],"hospitality":["HOTELS & EVENTS","Make the guest experience effortless.","Help guests find reception, meeting rooms, amenities, and event destinations.",["Guest navigation experience","Venue and event maps","Mobile service integration"],["BLE / Wi-Fi","Floor awareness","PDR"]]};
+let current=0,hover=false,visible=false,manualStop=false,timer=null;
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(reduced.matches)manualStop=true;
+function render(i,auto){
+ current=(i+tabs.length)%tabs.length;
+ const key=tabs[current].dataset.scene, m=marketing[key];if(!m)return;
+ kicker.textContent=m[0];title.textContent=m[1];summary.textContent=m[2];
+ shortDeliver.replaceChildren(...m[3].map(x=>{const e=document.createElement('li');e.textContent=x;return e;}));
+ tech.replaceChildren(...m[4].map(x=>{const e=document.createElement('span');e.textContent=x;return e;}));
+ number.textContent=String(current+1).padStart(2,'0')+' / 10 · '+tabs[current].querySelector('strong').textContent;
+ number.setAttribute('aria-live',auto?'off':'polite');
+ counter.innerHTML=String(current+1).padStart(2,'0')+' / 10 <span aria-hidden="true">—</span> '+(root.querySelector('[data-view].is-active')?.dataset.view==='venue'?'VENUE PREVIEW':'APPLICATION PREVIEW');
+ panel.setAttribute('aria-label',tabs[current].querySelector('strong').textContent+' solution example');
+ if(details.open)details.open=false;
+ const b=tabs[current];if(b&&rail.scrollWidth>rail.clientWidth){
+  rail.scrollTo({left:Math.max(0,b.offsetLeft-(rail.clientWidth-b.clientWidth)/2),behavior:reduced.matches?'auto':'smooth'});
+ }
+ panel.classList.remove('cinema-reveal');void panel.offsetWidth;panel.classList.add('cinema-reveal');
+ restart();
+}
+function eligible(){
+ const focusInside=root.contains(document.activeElement)&&document.activeElement!==play;
+ return !manualStop&&!hover&&!focusInside&&visible&&!document.hidden&&!reduced.matches;
+}
+function restart(){
+ if(timer){clearInterval(timer);timer=null;}
+ prog.style.animation='none';void prog.offsetWidth;
+ const running=eligible();
+ if(running){prog.style.animation='cinema-progress-fill 8s linear forwards';timer=setInterval(()=>tabs[(current+1)%tabs.length].click(),8000);}
+ play.setAttribute('aria-label',manualStop?'Start automatic slides':'Pause automatic slides');
+ play.title=manualStop?'Play slides':'Pause slides';play.textContent=manualStop?'▶':'Ⅱ';
+}
+tabs.forEach((b,i)=>{
+ b.addEventListener('click',()=>render(i,false));
+ b.addEventListener('keydown',e=>{
+  if(!['ArrowLeft','ArrowRight'].includes(e.key))return;
+  e.preventDefault();const next=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].focus();tabs[next].click();
+ });
+});
+root.querySelector('#cinema-prev').addEventListener('click',()=>tabs[(current-1+tabs.length)%tabs.length].click());
+root.querySelector('#cinema-next').addEventListener('click',()=>tabs[(current+1)%tabs.length].click());
+root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{counter.innerHTML=String(current+1).padStart(2,'0')+' / 10 <span aria-hidden="true">—</span> '+(b.dataset.view==='venue'?'VENUE PREVIEW':'APPLICATION PREVIEW');restart();}));
+play.addEventListener('click',()=>{manualStop=!manualStop;restart();});
+root.addEventListener('mouseenter',()=>{hover=true;restart();});
+root.addEventListener('mouseleave',()=>{hover=false;restart();});
+root.addEventListener('focusin',restart);
+root.addEventListener('focusout',()=>requestAnimationFrame(restart));
+document.addEventListener('visibilitychange',restart);
+if('IntersectionObserver' in window){new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;restart();},{threshold:.25}).observe(root);}
+else visible=true;
+if(reduced.addEventListener)reduced.addEventListener('change',()=>{if(reduced.matches)manualStop=true;restart();});
+let startX=0,startY=0;
+panel.addEventListener('touchstart',e=>{if(e.touches.length===1){startX=e.touches[0].clientX;startY=e.touches[0].clientY;}},{passive:true});
+panel.addEventListener('touchend',e=>{if(e.changedTouches.length){const dx=e.changedTouches[0].clientX-startX,dy=e.changedTouches[0].clientY-startY;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)tabs[(current+(dx<0?1:-1)+tabs.length)%tabs.length].click();}},{passive:true});
+render(0,false);
 })();
 </script>
 <section class="wrap solutions-section" id="technology" aria-labelledby="technology-title">
