@@ -708,4 +708,4 @@ h1,h2,h3,h4,p{margin-top:0}.section-header{display:grid;grid-template-columns:1.
  buttons.forEach((b,i)=>{b.addEventListener('click',()=>update(b.dataset.venue));b.addEventListener('keydown',(e)=>{if(!['ArrowDown','ArrowUp','ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();let next=e.key==='Home'?0:e.key==='End'?buttons.length-1:e.key==='ArrowDown'||e.key==='ArrowRight'?(i+1)%buttons.length:(i+buttons.length-1)%buttons.length;buttons[next].focus();update(buttons[next].dataset.venue);});});
  update('malls');
 })();
-</script></body></html>
+</script><script defer src="assets/portfolio-analytics.js"></script></body></html>
